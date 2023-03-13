@@ -1,0 +1,292 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784d3c;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+
+}
+
+html{
+    box-sizing: border-box; /*limitar rango de elementos*/
+    font-size: 62.5%; /* 1 rem = 10px*/
+}
+
+*, *:before, *:after { /*herencia de selectores*/
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;/*interlineado*/
+}
+
+/**Globales**/
+
+.contenedor{
+    
+    width: min(90%, 120rem);
+    margin: 0 auto; /*centrar contenido*/
+}
+
+a{
+    text-decoration: none; /*quitar subrayado a enlaces*/
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%; /*hace responsibas las imagenes*/
+}
+
+/*utilidades*/
+
+.no-margin {
+    margin: 0;
+
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+   text-align: center;
+}
+
+/*header*/
+
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover; /*toma todo el espacio disponible*/
+    background-repeat: no-repeat;
+    background-position: center center; /*centrar hor y vert R*/
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem; /*R - margen superior*/
+}
+
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem; /*alinear al centro*/
+    }
+}
+
+.barra_{
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;/*alinear horizontalmente*/
+        align-items: center;
+    }
+}
+
+.logo {
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+.logo__bold{
+    font-weight: 700;
+}
+
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex; /*alinea los enlaces uno frente a otro*/
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block; /*R- Alinea los enlaces de forma verticial cuando se encoje la pagina*/
+    text-align: center;/*R - Alinea al centro*/
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr; /*ordenamos los espacios del blog central y la barra lateral, asignando numero de espacios*/
+        column-gap: 4rem; /*dejamos otro espacio entre secciones*/
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--gris) ;/*Linea vertical que separa articulo de otro*/
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{ /*Selecciona el ultimo selector con el nombre 'entrada'*/
+    border: none; /*quita el ultimo borde*/
+    margin-bottom: 0;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;/*agrandamos el boton y dejamos en el centro*/
+    font-size: 1.8rem; /*agrandamos letra*/
+    text-transform: uppercase; /*volvemos mayuscula la letra*/
+    font-weight: 700;/*Negritas*/
+    margin-bottom: 2rem;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+
+.boton--secundario {
+    background-color: var(--primario);/*boton de articulo lateral*/
+}
+
+.cursos{
+    list-style: none;/*quitamos lista de la lista lateral*/
+}
+.widget-curso{
+    border-bottom: 1px solid var(--gris);/*agregamos linea gris entre articulos laterales*/
+    margin-bottom: 2rem;
+}
+.widget--curso:last-of-type{/*elimina la ultima linea gris*/
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-curso__info{
+    font-weight: normal;
+}
+.widget-curso__label,
+.widget-curso__info {
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+/**Nosotros**/
+
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: flex;
+        justify-content: space-between; /*separacion entre elementos*/
+    }
+
+    .sobre-nosotros__imagen,
+    .sobre-nosotros__texto{
+        flex-basis: calc(50% - 1rem); /*repartes espacio ya asignado a los selectores*/
+    }
+}
+
+/*cursos*/
+
+.curso {
+    padding: 3rem;
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /*coloca ;la imagen detras de la descripcion*/
+        column-gap: 2rem; /*separar la imagen de la descripcion*/
+    }
+}
+.curso:last-of-type {
+    border: none;
+}
+.curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.curso__info{
+    font-weight: normal;
+}
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+
+/*contacto*/
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);/*imagen de fondo*/
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto; /*colocamos el formulario debajo de la imagen necimada*/
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label{
+    flex: 0 0 9rem; /*alinea los labels del formulario*/
+    text-align: right;
+    padding-right: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.campo__field{
+    flex: 1 ; /*cubre todo el espacio asigando*/
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+height: 20rem;
+}
