@@ -55,7 +55,28 @@ h4 {
 }
 
 img {
-    max-width: 100%; /*hace responsibas las imagenes*/
+    max-width: 100%; /*hace responsivas las imagenes*/
+}
+.imagen{
+    width: 30%;
+}
+
+@media (min-width: 768px ) {
+    .imagen{
+        width: 100%;
+    }
+}
+.imagen-logo{
+    width: 35%;
+
+} 
+
+@media (min-width: 768px) {
+    .imagen-logo{
+        width: 100%;
+        
+    }
+    
 }
 
 /*utilidades*/
@@ -76,7 +97,7 @@ img {
 /*header*/
 
 .header {
-    background-image: url(../img/banner.jpg);
+    background-image: url(../img/banneresp2.jpg);
     height: 60rem;
     background-size: cover; /*toma todo el espacio disponible*/
     background-repeat: no-repeat;
@@ -95,6 +116,8 @@ img {
     }
 }
 
+
+
 .barra_{
     padding-top: 4rem;
 }
@@ -108,11 +131,22 @@ img {
 }
 
 .logo {
-    color: var(--blanco);
+    text-align: left;
+    width: 5%;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        margin-top: 5rem;
+        width: 25%;
+    }
 }
 
 .logo__nombre{
     font-weight: 400;
+    text-decoration: none;
+    padding-top: 2rem;
 }
 .logo__bold{
     font-weight: 700;
