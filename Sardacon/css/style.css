@@ -170,8 +170,6 @@ img {
 @media (min-width: 768px) {
     .contenido-principal{
         display: grid;
-        grid-template-columns: 2fr 1fr; /*ordenamos los espacios del blog central y la barra lateral, asignando numero de espacios*/
-        column-gap: 4rem; /*dejamos otro espacio entre secciones*/
     }
 }
 
