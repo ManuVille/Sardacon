@@ -167,6 +167,11 @@ img {
     color: var(--blanco);
 }
 
+.navegacion__enlace:hover{
+    cursor: pointer;
+    color:darkorange
+}
+
 @media (min-width: 768px) {
     .contenido-principal{
         display: grid;
@@ -205,6 +210,7 @@ img {
 
 .boton:hover{
     cursor: pointer;
+    color: yellowgreen;
 }
 
 .boton--primario{
