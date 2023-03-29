@@ -59,6 +59,7 @@ img {
 }
 .imagen{
     width: 30%;
+
 }
 
 @media (min-width: 768px ) {
@@ -108,11 +109,13 @@ img {
     text-align: center;
     color: var(--blanco);
     margin-top: 5rem; /*R - margen superior*/
+    visibility: hidden;
 }
 
 @media (min-width: 768px) {
     .header__texto{
         margin-top: 15rem; /*alinear al centro*/
+        visibility: visible;
     }
 }
 
@@ -140,6 +143,9 @@ img {
     .logo {
         margin-top: 5rem;
         width: 25%;
+    }
+    .logo__nombre{
+        padding-top: 5rem;
     }
 }
 
@@ -327,4 +333,93 @@ img {
 
 .campo__field--textarea{
 height: 20rem;
+}
+
+
+/*menu despelgable*/
+
+.nav-bar{
+    background: #e38646;
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    width: 100%;
+    
+}
+
+.menu, .submenu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {/*colores del menu*/
+    background: #555;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.menu__link{
+    display: block;
+    padding: 30px;
+    color: var(--blanco);
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: center;
+}
+.menu__link:hover{
+    background: #444;
+}
+.submenu .menu__link:hover{/*colores del menu con cursor*/
+    background: #222;
+}
+.submenu{/*ocultamos el submenu*/
+    height: 0;
+    overflow: hidden;
+    transition: all 1,3s;
+}
+
+.submenu .menu__link{/*Colores y espacio del submenu*/
+    background: #000;
+    padding-left: 50px;
+}
+.menu__item{
+text-align: center;
+}
+.mostrar {
+    margin-left: 0;
+}
+
+@media (min-width: 1024px) {
+    .nav-bar{ 
+        display: none;
+    }
+    .menu {
+        margin-left: 0;
+        display: flex;/*mostramos los elementos uno a lado del otro*/
+        text-align: center;
+    }
+    .menu__item{
+        text-align: center;
+        }
+    .container-submenu {
+        position: relative;
+    }
+    .submenu {
+        position: absolute;
+        top: 60px;
+        width: 200px;
+        overflow: visible;/*mostramos el submenu*/
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .container-submenu:hover .submenu { /*ya sale el submenu al poner el cursor encima*/
+        opacity: 1;
+        visibility: visible;
+    }
 }
