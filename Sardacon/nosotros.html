@@ -10,30 +10,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 </head>
 <body>
 
+    
+
     <header class="header">
 
-        <div class="contenedor">
-            <div class="barra">
-                    <a class="logo" href="index.html">
-                        <h1 class="logo__nombre no-margin centrar-texto"><img loading="lazy" src="img/image.png" alt="logo empresa"></h1>
-                    </a>
-                <nav class="navegacion">
-                    <a href="index.html" class="navegacion__enlace">Sobre Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Productos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
+        <a class="logo" href="index.html">
+            <h1 class="logo__nombre no-margin centrar-texto"><img loading="lazy" src="img/image.png" alt="logo empresa"></h1>
+        </a>
+        <span class="nav-bar" id="btnMenu"><i class="fa-solid fa-bars"></i> Menú </span>
+        <nav class="main-nav">
+            
+            <ul class="menu" id="menu">
+                
+                <li class="menu__item"><a href="" class="menu__link">Inicio</a></li> 
+                <li class="menu__item container-submenu">
+                    <a href="#" class="menu__link submenu-btn">Productos <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="submenu">
+                        <li class="menu__item"><a href="" class="menu__link">Aditivos</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Condimentos Sazonadores</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Especias</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Marinados</a></li>
+                    </ul>
+                </li> 
+                <li class="menu__item"><a href="" class="menu__link">Contacto</a></li> 
+            </ul>
+            
+            <div class="header__texto">
+                <h2 class="no-margin">El sabor su mejor opcion</h2>
+                <p class="no-margin">Empresa dedicada al manejo y fabricacion de Especias, condimentos y Marinados.</p>
             </div>
-        </div>
 
-        <div class="header__texto">
-            <h2 class="no-margin">Coffee Blog with tips and courses</h2>
-            <p class="no-margin">Learn and Order with the best Recipes and Tips.</p>
-        </div>
+              </nav>
+
+       
     </header>
 
     <main class="contenedor">
@@ -58,7 +72,7 @@
            </div>
        </div>
     </main>
-
+    <script src="menu.js"></script>
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
