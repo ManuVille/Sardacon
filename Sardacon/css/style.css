@@ -178,16 +178,31 @@ img {
     color:darkorange
 }
 
+
+
+.text__index{
+    
+}
+
 @media (min-width: 768px) {
     .contenido-principal{
         display: grid;
     }
+    .imagen__index{
+        visibility: visible;
+        margin-top: 5rem;
+    }
+    .text__index{
+        margin-top: 5rem;
+    }
+    
 }
 
 .entrada{
     border-bottom: 1px solid var(--gris) ;/*Linea vertical que separa articulo de otro*/
     margin-bottom: 2rem;
 }
+
 
 .entrada:last-of-type{ /*Selecciona el ultimo selector con el nombre 'entrada'*/
     border: none; /*quita el ultimo borde*/
