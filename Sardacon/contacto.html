@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7c64a3e2e9.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -35,6 +39,7 @@
                     </ul>
                 </li> 
                 <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li> 
+                
             </ul>
             <a class="logo" href="index.html">
                 <h1 class="logo__nombre no-margin centrar-texto"><img loading="lazy" src="img/image.png" alt="logo empresa"></h1>
@@ -45,49 +50,105 @@
             </div>
 
               </nav>
-
     </header>
 
-    <main class="contenedor">
-       <h3 class="centrar-texto text__index">Contact Us</h3>
+    <main class=" contactUs contacto">
 
-        <div class="contacto-bg"> </div>
+       <div class="title">
+            <h2 class="ctitulo">¡Contactanos!</h2>
+       </div>
+       <div class="box">
+        <!--form-->
+        <div class="contact form">
+            <h3>Manda un Mensaje</h3>
+            <form action="">
+                <div class="formBox">
+                    <div class="row50">
+                        <div class="inputBox">
+                            <span>Nombre: </span>
+                            <input type="text" placeholder="Tu nombre">
+                        </div>
+                        <div class="inputBox">
+                            <span>Apellidos: </span>
+                            <input type="text" placeholder="Tu Apellido">
+                        </div>
+                    </div>
 
-        <form class="formulario">
-            <div class="campo">
-                <label class="campo__label" for="nombre">Name:</label>
-                <input 
-                    class="campo__field"
-                    type="text" 
-                    placeholder="Your Name" 
-                    id="nombre"
-                    >
+                    <div class="row50">
+                        <div class="inputBox">
+                            <span>Email: </span>
+                            <input type="text" placeholder="tucorreo@ejemplo.com">
+                        </div>
+                        <div class="inputBox">
+                            <span>Celular: </span>
+                            <input type="text" placeholder="+52">
+                        </div>
+                    </div>
+
+                    <div class="row100">
+                        <div class="inputBox">
+                            <span>Mensaje: </span>
+                            <textarea placeholder="Escribe tu mensaje..." name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row100">
+                        <div class="inputBox">
+                           <input type="submit" value="Enviar">
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <!--infoBox-->
+        <div class="contact info">
+            <h3>Informacion de Contacto</h3>
+            <div class="infoBox">
+                <div>
+                    <span><ion-icon name="location"></ion-icon></span>
+                    <p>Lituania #130 Col. Bosques del Pilar ,  C.P. 72310</p>
+                </div>
+                <div>
+                    <span><ion-icon name="mail"></ion-icon></span>
+                    <a href="mailto:jcsc724780@yahoo.com.mx">jcsc724780@yahoo.com.mx</a>
+                </div>
+                <div>
+                    <span><ion-icon name="call"></ion-icon></span>
+                    <a href="tel:2228879966">(222) 887 99 66</a>
+                </div>
+                <div>
+                    <span><ion-icon name="phone-portrait"></ion-icon></span>
+                    <a href="tel:2223190156">(222) 319 01 56</a>
+                </div>
+                <div>
+                    <span><ion-icon name="phone-portrait"></ion-icon></span>
+                    <a href="tel:2222055273">(222) 205 52 73</a>
+                </div>
+                <!--Social media-->
+                <ul class="sci">
+                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </ul>
             </div>
-            <div class="campo">
-                <label class="campo__label" for="email">E-mail:</label>
-                <input
-                    class="campo__field" 
-                    type="text" 
-                    placeholder="Your E-mail" 
-                    id="email"
-                    >
-            </div>
-            <div class="campo">
-                <label class="campo__label" for="mensaje">Message:</label>
-                <textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
-            </div class="campo">
-                <input
-                    type="submit" 
-                    value="Enviar" 
-                    class="boton boton--primario"
-                    >
-            <div>
-                
-            </div>
-        </form>
-       
+        </div>
+
+        <!--InfoMap-->
+        <div class="contact map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.1342866254727!2d-98.
+            12763042592145!3d19.057832552544888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfea7d7292c4b3%3A0xe8095f33db869eee!2sLituania%20130%2C%20Bosques%20del%20Pilar%2C%2072310%20Puebla%2C%20Pue.
+            !5e0!3m2!1ses!2smx!4v1681329406623!5m2!1ses!2smx" 
+             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       </div>
+
     </main>
     <script src="menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
