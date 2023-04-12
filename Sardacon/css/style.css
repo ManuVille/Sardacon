@@ -487,7 +487,7 @@ text-align: center;
 .box {
     position: relative;
     display: grid;
-    grid-template-columns: 4fr 8fr;
+    grid-template-columns: 6fr 4fr;
     grid-template-rows: 20fr 10fr;
     grid-template-areas: 
     "form info"
@@ -635,10 +635,8 @@ text-align: center;
 
 /*responsive*/
 
-@media (max-width: 728px) {
-    .contacto {
+@media (max-width: 768px) {
 
-    }
     .contactUs {
         padding: 20px;
     }
