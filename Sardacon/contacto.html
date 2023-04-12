@@ -52,43 +52,45 @@
               </nav>
     </header>
 
-    <main class=" contactUs contacto">
+    <main class="contenedor contactUs contacto">
 
        <div class="title">
             <h2 class="ctitulo">¡Contactanos!</h2>
        </div>
        <div class="box">
         <!--form-->
+        
         <div class="contact form">
             <h3>Manda un Mensaje</h3>
-            <form action="">
+            <form action="https://formsubmit.co/sardacon1@gmail.com" method="POST">
                 <div class="formBox">
                     <div class="row50">
                         <div class="inputBox">
                             <span>Nombre: </span>
-                            <input type="text" placeholder="Tu nombre">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            <input type="hidden" name="_subject" value="Nuevo mensaje de un cliente!">
                         </div>
                         <div class="inputBox">
                             <span>Apellidos: </span>
-                            <input type="text" placeholder="Tu Apellido">
+                            <input type="text" name="apellidos" placeholder="Tu Apellido">
                         </div>
                     </div>
 
                     <div class="row50">
                         <div class="inputBox">
                             <span>Email: </span>
-                            <input type="text" placeholder="tucorreo@ejemplo.com">
+                            <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required>
                         </div>
                         <div class="inputBox">
                             <span>Celular: </span>
-                            <input type="text" placeholder="+52">
+                            <input type="text" name="numero" placeholder="+52" required>
                         </div>
                     </div>
 
                     <div class="row100">
                         <div class="inputBox">
                             <span>Mensaje: </span>
-                            <textarea placeholder="Escribe tu mensaje..." name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="4" type="text"></textarea required>
                         </div>
                     </div>
 
@@ -148,6 +150,10 @@
     <script src="menu.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+        
+    </script>
 
     <footer class="footer">
         <div class="contenedor">
